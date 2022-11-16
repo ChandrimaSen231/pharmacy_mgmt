@@ -355,11 +355,11 @@ def main(root_main):
             l0.pack(padx=20, pady=15, anchor="n", expand=1)
             l1 = ttk.Label(
                 self.rootframe,
-                text="Made by Subhrojyoti Sen.",
+                text="Made by Subhrojyoti Sen and Shashank Daga.",
             )
             l1.pack(padx=20, pady=5, anchor="n", expand=1)
             l2 = ttk.Label(
-                self.rootframe, text="drugs are illegal.", style="small.TLabel"
+                self.rootframe, text=" ", style="small.TLabel"
             )
             l2.pack(padx=20, pady=5, anchor="n", expand=1)
             quit_btn = ttk.Button(self.rootframe, text="Quit", command=self.quit_app)
