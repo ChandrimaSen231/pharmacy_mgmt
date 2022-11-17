@@ -1,6 +1,7 @@
 from backend import *
 from pharmacy_backend import *
 from login_backend import *
+import sqlite3 as sql
 
 conn = sql.connect("test.db")
 cursor = conn.cursor()
