@@ -310,15 +310,15 @@ def get_reciept(name,age,sex,date,med_list):
     f = open(f"{name}_{date}.txt",'w')
     f.write(receipt)
     for a,med in zip(amt,med_list):
-        f.write(f"\t{med[0]}\t{med[1]}\t{a}\t18%\t{round(a*1.18,2)}\n")
+        f.write(f"\t{med[0]}\t{med[1]}\t{a*med[1]}\t18%\t{round(a*1.18,2)}\n")
     f.write(f"\tNET AMOUNT: {round(total_amt*1.18,2)}")
     f.close()
 
 execute_sql("PRAGMA foreign_keys=on")
-create_table(customers)
-create_table(meds)
-create_table(orders)
-create_table(emp)
+#create_table(customers)
+#create_table(meds)
+#create_table(orders)
+#create_table(emp)
 
 if __name__ == "__main__":
     conn.close()

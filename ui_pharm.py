@@ -316,6 +316,7 @@ def main(root_main):
                 
             else:
                 self.display_cust_data(data)
+                self.new_cust_reg_btn.config(state=tk.DISABLED)
 
         def show_amt(self):
             med_list = []
@@ -340,6 +341,7 @@ def main(root_main):
             self.cust_sex_entry.delete(0,tk.END)
             self.cust_addr_entry.delete(0,tk.END)
             self.cust_phone_number_entry.delete(0,tk.END)
+            tk.messagebox.showinfo("reciept","Reciept Generated.")
             self.customer_details_page.pack(fill='both',expand=1)
             self.payment_details_page.pack_forget()
 

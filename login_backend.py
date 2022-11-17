@@ -15,6 +15,12 @@ create_login = '''CREATE TABLE IF NOT EXISTS login_table (
 def create_login_table():
     backend.create_table(create_login)
 
+def delete_login_table():
+    global cursor
+    delete_cmd = "DROP TABLE IF EXISTS login_table;"
+    cursor.execute(delete_cmd)
+    conn.commit()
+
 def verify_data(username,password,_type):
     global cursor
     fetch_cmd = f"SELECT * FROM login_table WHERE username = '{username}' AND password = '{password}' AND type ='{_type}';"
