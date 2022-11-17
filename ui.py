@@ -368,8 +368,6 @@ def main(root_main):
                 sticky="nswe",
             )
 
-            self.edit_row_btn = ttk.Button(self.view, text='Edit row', style="accent.TButton")
-            self.edit_row_btn.grid(row=7, column=0, padx=10,pady=6,sticky='sew')
 
             self.place_order = ttk.Button(self.view, text='Place Order', command=self.placeOrderBox, state=tk.DISABLED)
             self.place_order.grid(row=7, column=5, padx=10,pady=6,sticky='w')
